@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+    
+        Ipaire<Integer, String> paire1 = new Ipaire<>(1, "String");
+
+        System.out.println(paire1.fst());
+        System.out.println(paire1.snd());
+        System.out.println(paire1);
+        Ipaire newPaireFst = paire1.changeFst(1.0);
+
+        System.out.println(newPaireFst.fst(), newPaireFst.snd(), newPaireFst);
+        Ipaire newPaireSnd = newPaireFst.changeSnd(1s);
+
+        System.out.println(newPaireSnd.fst(), newPaireSnd.snd(), newPaireSnd);
+        
+        Ipaire<String, Ipaire> paireComposed = new Ipaire<>("Test", paire1);
+
+        System.out.println(paireComposed);
+    }
+    
+
+}
+
+    
+
